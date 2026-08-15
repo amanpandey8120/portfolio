@@ -414,6 +414,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Contact Form Submission Handler
   const contactForm = document.getElementById('contactForm');
+  const feedbackEl = document.getElementById('form-feedback');
+
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -424,10 +426,17 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.disabled = true;
 
       setTimeout(() => {
-        alert('Thank you for reaching out! Your message has been received. Shivam will contact you shortly.');
+        if (feedbackEl) {
+          feedbackEl.style.display = 'block';
+          feedbackEl.innerHTML = '<i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully. Shivam will get back to you soon.';
+        }
         contactForm.reset();
         submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
+
+        setTimeout(() => {
+          if (feedbackEl) feedbackEl.style.display = 'none';
+        }, 6000);
       }, 1000);
     });
   }
@@ -440,4 +449,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const yearEl = document.getElementById('footer-year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
+
+/* Copy Email Utility */
+function copyEmail() {
+  const email = 'pandeyshivam4657@gmail.com';
+  navigator.clipboard.writeText(email).then(() => {
+    const btn = document.getElementById('btn-copy-email');
+    if (btn) {
+      btn.innerHTML = '<i class="fas fa-check" style="color:var(--accent-green);"></i>';
+      setTimeout(() => {
+        btn.innerHTML = '<i class="fas fa-copy"></i>';
+      }, 2000);
+    }
+  }).catch(() => {
+    alert('Email: ' + email);
+  });
+}
+
 
