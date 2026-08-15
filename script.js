@@ -435,5 +435,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Phase 2: Init
   initFilterTabs();
   initModal();
+
+  // Phase 3: Footer year
+  const yearEl = document.getElementById('footer-year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 });
 
