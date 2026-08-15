@@ -85,7 +85,7 @@ body::before {
 }
 
 section {
-  padding: 90px 0;
+  padding: 44px 0;
   position: relative;
 }
 
@@ -105,7 +105,7 @@ a {
 /* Section Header */
 .section-title {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 32px;
 }
 
 .section-title .subtitle {
@@ -522,6 +522,14 @@ nav {
 /* ==========================================================================
    About Me Section
    ========================================================================== */
+.about {
+  padding-top: 36px;
+}
+
+.about .section-title {
+  margin-bottom: 32px;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 340px;
@@ -1581,7 +1589,7 @@ footer {
 
 @media (max-width: 768px) {
   section {
-    padding: 60px 0;
+    padding: 32px 0;
   }
 
   .hero-text h1 {
@@ -2196,14 +2204,14 @@ footer {
 footer.site-footer {
   background: var(--bg-terminal);
   border-top: 1px solid var(--border-color);
-  padding: 56px 0 0;
+  padding: 36px 0 0;
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: 1.6fr 1fr 1fr;
   gap: 40px;
-  padding-bottom: 40px;
+  padding-bottom: 28px;
 }
 
 .footer-brand {
@@ -2215,9 +2223,9 @@ footer.site-footer {
 .footer-logo {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   font-family: var(--font-mono);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--text-main);
   text-decoration: none;
@@ -2226,35 +2234,28 @@ footer.site-footer {
 
 .footer-logo:hover { color: var(--primary); }
 
-.footer-logo span { color: var(--primary); }
-
-.footer-tagline {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--primary);
-}
-
 .footer-stack {
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   color: var(--text-dim);
   font-family: var(--font-mono);
-  line-height: 1.6;
+  line-height: 1.7;
+  letter-spacing: 0.2px;
 }
 
 .footer-col-title {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   color: var(--text-muted);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .footer-nav {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 9px;
 }
 
 .footer-nav a {
@@ -2269,7 +2270,7 @@ footer.site-footer {
 .footer-links {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 9px;
 }
 
 .footer-link-item {
@@ -2280,6 +2281,7 @@ footer.site-footer {
   color: var(--text-dim);
   text-decoration: none;
   transition: var(--transition);
+  min-height: 28px;
 }
 
 .footer-link-item i { color: var(--primary); width: 16px; text-align: center; }
@@ -2288,7 +2290,7 @@ footer.site-footer {
 
 .footer-bottom {
   border-top: 1px solid var(--border-color);
-  padding: 20px 0;
+  padding: 16px 0;
   text-align: center;
 }
 

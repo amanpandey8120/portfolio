@@ -389,22 +389,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // IntersectionObserver for Scroll Active Link Highlighting
   const sections = document.querySelectorAll('section[id]');
+  const navLinksList = document.querySelectorAll('.nav-links a[href^="#"]');
 
   function highlightNavOnScroll() {
-    const scrollY = window.pageYOffset;
+    const offset = 130; // sticky header height + buffer
 
-    sections.forEach(current => {
-      const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop - 100;
-      const sectionId = current.getAttribute('id');
-      const navLink = document.querySelector(`.nav-links a[href*="#${sectionId}"]`);
+    // Default to first section (Home) so page load always starts on Home
+    let currentId = sections.length > 0 ? sections[0].getAttribute('id') : '';
 
-      if (navLink) {
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-          navLink.classList.add('active');
-        } else {
-          navLink.classList.remove('active');
-        }
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      // Section is considered "passed" when its top edge is at or above the offset line
+      if (rect.top <= offset) {
+        currentId = section.getAttribute('id');
+      }
+    });
+
+    navLinksList.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${currentId}`) {
+        link.classList.add('active');
       }
     });
   }
