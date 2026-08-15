@@ -351,67 +351,512 @@
     </div>
   </section>
 
-  <!-- PROJECTS SECTION (Phase 1 Placeholder Layout) -->
+  <!-- ============================================================
+       PHASE 2: PROJECTS & TECHNICAL PROOF
+       ============================================================ -->
   <section id="projects" class="projects">
     <div class="container">
+
+      <!-- Section Header -->
       <div class="section-title">
-        <h2>DevOps Projects</h2>
+        <span class="subtitle">// Technical Portfolio</span>
+        <h2>Projects & Technical Proof</h2>
+        <p class="section-desc">Hands-on projects demonstrating DevOps engineering capability, cloud infrastructure,
+          CI/CD automation, and supporting AI/ML experience.</p>
       </div>
 
-      <div class="projects-grid">
-        <div class="project-card">
-          <div>
-            <h3>Banking Finance CI/CD</h3>
-            <p>Automated CI/CD deployment pipeline for a banking application with multi-stage verification.</p>
+      <!-- Category Filter Tabs -->
+      <div class="project-filter-tabs" role="tablist" aria-label="Project Categories">
+        <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true" id="tab-all">
+          <i class="fas fa-th-large"></i> All Projects
+        </button>
+        <button class="filter-tab" data-filter="devops" role="tab" aria-selected="false" id="tab-devops">
+          <i class="fas fa-cloud"></i> DevOps & Cloud
+        </button>
+        <button class="filter-tab" data-filter="aiml" role="tab" aria-selected="false" id="tab-aiml">
+          <i class="fas fa-brain"></i> AI/ML & Data
+        </button>
+      </div>
+
+      <!-- ====================================================
+           FEATURED PROJECTS
+           ==================================================== -->
+      <div class="projects-subsection featured-subsection" data-category-section="featured">
+        <div class="subsection-header">
+          <span class="subsection-label"><i class="fas fa-star"></i> Featured Projects</span>
+          <p class="subsection-desc">Strongest demonstrations of DevOps capability</p>
+        </div>
+
+        <div class="featured-projects-grid">
+
+          <!-- FEATURED 1: AddressBook CI/CD -->
+          <div class="project-card featured-card" data-category="devops" data-project-id="addressbook">
+            <div class="card-top">
+              <div class="card-badges-row">
+                <span class="category-badge devops-badge"><i class="fas fa-cloud"></i> DevOps & Cloud</span>
+                <span class="featured-star"><i class="fas fa-star"></i> Featured</span>
+              </div>
+              <div class="project-number">01</div>
+            </div>
+            <h3 class="card-title">AddressBook CI/CD Pipeline</h3>
+            <p class="card-desc">End-to-end CI/CD pipeline for a Maven-based Java AddressBook application. Implements
+              automated build, test, and deployment stages using Jenkins pipeline-as-code, integrating source control
+              triggers with containerized deployment.</p>
+
+            <div class="devops-focus-strip">
+              <span class="focus-label">DevOps Focus</span>
+              <div class="focus-tags">
+                <span class="focus-tag"><i class="fas fa-infinity"></i> CI/CD</span>
+                <span class="focus-tag"><i class="fab fa-docker"></i> Containerization</span>
+                <span class="focus-tag"><i class="fas fa-robot"></i> Automation</span>
+                <span class="focus-tag"><i class="fas fa-code-branch"></i> Git Workflow</span>
+              </div>
+            </div>
+
             <div class="project-tech-tags">
+              <span class="mini-tag">Jenkins</span>
+              <span class="mini-tag">Maven</span>
+              <span class="mini-tag">Docker</span>
+              <span class="mini-tag">Git</span>
+              <span class="mini-tag">Linux</span>
+              <span class="mini-tag">Java</span>
+            </div>
+
+            <div class="experience-link-tag">
+              <i class="fas fa-link"></i> Developed during StarAgile DevOps Training
+            </div>
+
+            <div class="card-actions">
+              <a href="https://github.com/amanpandey8120/addressbook-cicd-project" target="_blank" rel="noopener"
+                class="btn btn-outline btn-sm" id="btn-github-addressbook">
+                <i class="fab fa-github"></i> View GitHub
+              </a>
+              <button class="btn btn-primary btn-sm" onclick="openProjectModal('addressbook')"
+                id="btn-details-addressbook">
+                <i class="fas fa-info-circle"></i> View Details
+              </button>
+            </div>
+          </div>
+
+          <!-- FEATURED 2: Banking Finance -->
+          <div class="project-card featured-card" data-category="devops" data-project-id="banking">
+            <div class="card-top">
+              <div class="card-badges-row">
+                <span class="category-badge devops-badge"><i class="fas fa-cloud"></i> DevOps & Cloud</span>
+                <span class="featured-star"><i class="fas fa-star"></i> Featured</span>
+              </div>
+              <div class="project-number">02</div>
+            </div>
+            <h3 class="card-title">StarAgile Banking Finance CI/CD</h3>
+            <p class="card-desc">Full-stack CI/CD pipeline implementation for a banking and finance web application.
+              Demonstrates multi-stage deployment from code commit to containerized production environment using industry
+              DevOps practices.</p>
+
+            <div class="devops-focus-strip">
+              <span class="focus-label">DevOps Focus</span>
+              <div class="focus-tags">
+                <span class="focus-tag"><i class="fas fa-infinity"></i> CI/CD</span>
+                <span class="focus-tag"><i class="fab fa-docker"></i> Docker</span>
+                <span class="focus-tag"><i class="fas fa-dharmachakra"></i> Kubernetes</span>
+                <span class="focus-tag"><i class="fas fa-cloud"></i> AWS</span>
+              </div>
+            </div>
+
+            <div class="project-tech-tags">
+              <span class="mini-tag">Jenkins</span>
+              <span class="mini-tag">Docker</span>
+              <span class="mini-tag">Kubernetes</span>
               <span class="mini-tag">AWS</span>
+              <span class="mini-tag">Git</span>
+              <span class="mini-tag">Maven</span>
+            </div>
+
+            <div class="experience-link-tag">
+              <i class="fas fa-link"></i> Developed during StarAgile DevOps Training
+            </div>
+
+            <div class="card-actions">
+              <a href="https://github.com/amanpandey8120/star-agile-banking-finance" target="_blank" rel="noopener"
+                class="btn btn-outline btn-sm" id="btn-github-banking">
+                <i class="fab fa-github"></i> View GitHub
+              </a>
+              <button class="btn btn-primary btn-sm" onclick="openProjectModal('banking')"
+                id="btn-details-banking">
+                <i class="fas fa-info-circle"></i> View Details
+              </button>
+            </div>
+          </div>
+
+          <!-- FEATURED 3: AgroAid -->
+          <div class="project-card featured-card featured-card--aiml" data-category="aiml" data-project-id="agroaid">
+            <div class="card-top">
+              <div class="card-badges-row">
+                <span class="category-badge aiml-badge"><i class="fas fa-brain"></i> AI/ML & Data</span>
+                <span class="featured-star"><i class="fas fa-star"></i> Featured</span>
+              </div>
+              <div class="project-number">03</div>
+            </div>
+            <h3 class="card-title">AgroAid — Mandi Price Prediction</h3>
+            <p class="card-desc">Machine learning solution for agricultural commodity price prediction at Mandi markets.
+              Processes historical price data to build predictive models for farmers and traders, enabling data-driven
+              market decisions.</p>
+
+            <div class="project-tech-tags">
+              <span class="mini-tag">Python</span>
+              <span class="mini-tag">Machine Learning</span>
+              <span class="mini-tag">Data Processing</span>
+              <span class="mini-tag">Pandas</span>
+              <span class="mini-tag">Scikit-learn</span>
+            </div>
+
+            <div class="experience-link-tag">
+              <i class="fas fa-link"></i> Developed at KD Infovision (AI/ML Engineer)
+            </div>
+
+            <div class="card-actions">
+              <a href="https://github.com/amanpandey8120/mandi-prize" target="_blank" rel="noopener"
+                class="btn btn-outline btn-sm" id="btn-github-agroaid">
+                <i class="fab fa-github"></i> View GitHub
+              </a>
+              <button class="btn btn-primary btn-sm" onclick="openProjectModal('agroaid')"
+                id="btn-details-agroaid">
+                <i class="fas fa-info-circle"></i> View Details
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ====================================================
+           01 — DEVOPS & CLOUD PROJECTS
+           ==================================================== -->
+      <div class="projects-subsection" data-category-section="devops">
+        <div class="subsection-header">
+          <div class="subsection-label-block">
+            <span class="subsection-number">01</span>
+            <div>
+              <span class="subsection-label"><i class="fas fa-cloud"></i> DevOps & Cloud Projects</span>
+              <p class="subsection-desc">CI/CD pipelines, containerization, infrastructure automation, and cloud
+                deployment — developed during StarAgile DevOps Training</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects-grid-standard">
+
+          <!-- PHP Project -->
+          <div class="project-card standard-card" data-category="devops" data-project-id="php">
+            <div class="card-badges-row">
+              <span class="category-badge devops-badge"><i class="fas fa-cloud"></i> DevOps & Cloud</span>
+            </div>
+            <h3 class="card-title">PHP Application Deployment</h3>
+            <p class="card-desc">CI/CD pipeline setup for a PHP web application, demonstrating automated build and
+              deployment workflow using version-controlled source code and containerized application delivery.</p>
+
+            <div class="devops-focus-strip compact">
+              <span class="focus-label">DevOps Focus</span>
+              <div class="focus-tags">
+                <span class="focus-tag"><i class="fas fa-infinity"></i> CI/CD</span>
+                <span class="focus-tag"><i class="fab fa-docker"></i> Containerization</span>
+                <span class="focus-tag"><i class="fas fa-code-branch"></i> Git</span>
+              </div>
+            </div>
+
+            <div class="project-tech-tags">
+              <span class="mini-tag">PHP</span>
               <span class="mini-tag">Docker</span>
               <span class="mini-tag">Jenkins</span>
-              <span class="mini-tag">Kubernetes</span>
+              <span class="mini-tag">Git</span>
+              <span class="mini-tag">Linux</span>
+            </div>
+
+            <div class="experience-link-tag">
+              <i class="fas fa-link"></i> StarAgile DevOps Training
+            </div>
+
+            <div class="card-actions">
+              <a href="https://github.com/amanpandey8120/php-project" target="_blank" rel="noopener"
+                class="btn btn-outline btn-sm" id="btn-github-php">
+                <i class="fab fa-github"></i> View GitHub
+              </a>
+              <button class="btn btn-primary btn-sm" onclick="openProjectModal('php')" id="btn-details-php">
+                <i class="fas fa-info-circle"></i> View Details
+              </button>
             </div>
           </div>
-          <a href="https://github.com/amanpandey8120/star-agile-banking-finance.git" target="_blank" rel="noopener"
-            class="project-link">
-            View Repository <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
 
-        <div class="project-card">
-          <div>
-            <h3>Insurance Infra Automation</h3>
-            <p>Cloud infrastructure provisioning and automated container monitoring setup.</p>
+          <!-- Apache Website -->
+          <div class="project-card standard-card" data-category="devops" data-project-id="apache">
+            <div class="card-badges-row">
+              <span class="category-badge devops-badge"><i class="fas fa-cloud"></i> DevOps & Cloud</span>
+            </div>
+            <h3 class="card-title">Apache Web Server Deployment</h3>
+            <p class="card-desc">Configuration and deployment of a web application on Apache HTTP Server. Demonstrates
+              Linux server administration, web server setup, and deployment automation practices.</p>
+
+            <div class="devops-focus-strip compact">
+              <span class="focus-label">DevOps Focus</span>
+              <div class="focus-tags">
+                <span class="focus-tag"><i class="fas fa-server"></i> Linux Server</span>
+                <span class="focus-tag"><i class="fas fa-cogs"></i> Web Server Config</span>
+                <span class="focus-tag"><i class="fas fa-rocket"></i> Deployment</span>
+              </div>
+            </div>
+
             <div class="project-tech-tags">
-              <span class="mini-tag">AWS</span>
-              <span class="mini-tag">Docker</span>
-              <span class="mini-tag">Terraform</span>
-              <span class="mini-tag">Prometheus</span>
+              <span class="mini-tag">Apache HTTP</span>
+              <span class="mini-tag">Linux</span>
+              <span class="mini-tag">Git</span>
+              <span class="mini-tag">Shell Scripting</span>
+            </div>
+
+            <div class="experience-link-tag">
+              <i class="fas fa-link"></i> StarAgile DevOps Training
+            </div>
+
+            <div class="card-actions">
+              <a href="https://github.com/amanpandey8120/apachewebsite" target="_blank" rel="noopener"
+                class="btn btn-outline btn-sm" id="btn-github-apache">
+                <i class="fab fa-github"></i> View GitHub
+              </a>
+              <button class="btn btn-primary btn-sm" onclick="openProjectModal('apache')" id="btn-details-apache">
+                <i class="fas fa-info-circle"></i> View Details
+              </button>
             </div>
           </div>
-          <a href="https://github.com/amanpandey8120/star-agile-insurance-project.git" target="_blank" rel="noopener"
-            class="project-link">
-            View Repository <i class="fas fa-arrow-right"></i>
-          </a>
-        </div>
 
-        <div class="project-card">
-          <div>
-            <h3>Healthcare Infrastructure</h3>
-            <p>Automated healthcare environment deployment using configuration management tools.</p>
+          <!-- Healthcare Project -->
+          <div class="project-card standard-card" data-category="devops" data-project-id="healthcare">
+            <div class="card-badges-row">
+              <span class="category-badge devops-badge"><i class="fas fa-cloud"></i> DevOps & Cloud</span>
+            </div>
+            <h3 class="card-title">Healthcare Application CI/CD</h3>
+            <p class="card-desc">Automated CI/CD pipeline for a healthcare web application with configuration
+              management using Ansible. Demonstrates infrastructure automation, environment consistency, and reliable
+              application deployment.</p>
+
+            <div class="devops-focus-strip compact">
+              <span class="focus-label">DevOps Focus</span>
+              <div class="focus-tags">
+                <span class="focus-tag"><i class="fas fa-infinity"></i> CI/CD</span>
+                <span class="focus-tag"><i class="fas fa-robot"></i> Ansible</span>
+                <span class="focus-tag"><i class="fab fa-docker"></i> Docker</span>
+                <span class="focus-tag"><i class="fas fa-cloud"></i> AWS</span>
+              </div>
+            </div>
+
             <div class="project-tech-tags">
-              <span class="mini-tag">AWS</span>
-              <span class="mini-tag">Docker</span>
               <span class="mini-tag">Jenkins</span>
               <span class="mini-tag">Ansible</span>
+              <span class="mini-tag">Docker</span>
+              <span class="mini-tag">AWS</span>
+              <span class="mini-tag">Git</span>
+            </div>
+
+            <div class="experience-link-tag">
+              <i class="fas fa-link"></i> StarAgile DevOps Training
+            </div>
+
+            <div class="card-actions">
+              <a href="https://github.com/amanpandey8120/health-care-project" target="_blank" rel="noopener"
+                class="btn btn-outline btn-sm" id="btn-github-healthcare">
+                <i class="fab fa-github"></i> View GitHub
+              </a>
+              <button class="btn btn-primary btn-sm" onclick="openProjectModal('healthcare')"
+                id="btn-details-healthcare">
+                <i class="fas fa-info-circle"></i> View Details
+              </button>
             </div>
           </div>
-          <a href="https://github.com/amanpandey8120/health-care-project.git" target="_blank" rel="noopener"
-            class="project-link">
-            View Repository <i class="fas fa-arrow-right"></i>
-          </a>
+
+          <!-- InsureMe Project -->
+          <div class="project-card standard-card" data-category="devops" data-project-id="insureme">
+            <div class="card-badges-row">
+              <span class="category-badge devops-badge"><i class="fas fa-cloud"></i> DevOps & Cloud</span>
+            </div>
+            <h3 class="card-title">InsureMe — Infrastructure Automation</h3>
+            <p class="card-desc">Cloud infrastructure provisioning and automated deployment for an insurance
+              application. Demonstrates infrastructure-as-code practices and container-based deployment on cloud
+              infrastructure.</p>
+
+            <div class="devops-focus-strip compact">
+              <span class="focus-label">DevOps Focus</span>
+              <div class="focus-tags">
+                <span class="focus-tag"><i class="fas fa-layer-group"></i> IaC</span>
+                <span class="focus-tag"><i class="fab fa-docker"></i> Docker</span>
+                <span class="focus-tag"><i class="fas fa-cloud"></i> AWS</span>
+                <span class="focus-tag"><i class="fas fa-infinity"></i> CI/CD</span>
+              </div>
+            </div>
+
+            <div class="project-tech-tags">
+              <span class="mini-tag">Terraform</span>
+              <span class="mini-tag">Docker</span>
+              <span class="mini-tag">AWS</span>
+              <span class="mini-tag">Jenkins</span>
+              <span class="mini-tag">Git</span>
+            </div>
+
+            <div class="experience-link-tag">
+              <i class="fas fa-link"></i> StarAgile DevOps Training
+            </div>
+
+            <div class="card-actions">
+              <a href="https://github.com/amanpandey8120/insureme-project-SHIVAM--PANDEY-staragile" target="_blank"
+                rel="noopener" class="btn btn-outline btn-sm" id="btn-github-insureme">
+                <i class="fab fa-github"></i> View GitHub
+              </a>
+              <button class="btn btn-primary btn-sm" onclick="openProjectModal('insureme')" id="btn-details-insureme">
+                <i class="fas fa-info-circle"></i> View Details
+              </button>
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
+
+      <!-- ====================================================
+           02 — AI/ML & DATA ENGINEERING PROJECTS
+           ==================================================== -->
+      <div class="projects-subsection" data-category-section="aiml">
+        <div class="subsection-header">
+          <div class="subsection-label-block">
+            <span class="subsection-number aiml-number">02</span>
+            <div>
+              <span class="subsection-label aiml-label"><i class="fas fa-brain"></i> AI/ML & Data Engineering
+                Projects</span>
+              <p class="subsection-desc">Machine learning, data processing, and automation projects — developed through
+                professional experience at KD Infovision</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="projects-grid-standard">
+
+          <!-- YOLO Object Detection -->
+          <div class="project-card standard-card aiml-card" data-category="aiml" data-project-id="yolo">
+            <div class="card-badges-row">
+              <span class="category-badge aiml-badge"><i class="fas fa-brain"></i> AI/ML & Data</span>
+            </div>
+            <h3 class="card-title">YOLO Object Detection</h3>
+            <p class="card-desc">Computer vision pipeline using YOLO (You Only Look Once) architecture for real-time
+              object detection. Involves model integration, image preprocessing, and detection result processing for
+              practical use cases.</p>
+
+            <div class="project-tech-tags">
+              <span class="mini-tag">Python</span>
+              <span class="mini-tag">YOLO</span>
+              <span class="mini-tag">Computer Vision</span>
+              <span class="mini-tag">OpenCV</span>
+            </div>
+
+            <div class="experience-link-tag aiml-exp">
+              <i class="fas fa-link"></i> KD Infovision — AI/ML Engineer
+            </div>
+          </div>
+
+          <!-- Tableau → DOMO Migration -->
+          <div class="project-card standard-card aiml-card" data-category="aiml" data-project-id="domo">
+            <div class="card-badges-row">
+              <span class="category-badge aiml-badge"><i class="fas fa-brain"></i> AI/ML & Data</span>
+            </div>
+            <h3 class="card-title">Tableau → DOMO Data Migration</h3>
+            <p class="card-desc">ETL and data migration project transitioning business intelligence dashboards and
+              datasets from Tableau to DOMO platform. Includes data mapping, transformation pipeline design, and
+              validation of migrated datasets.</p>
+
+            <div class="project-tech-tags">
+              <span class="mini-tag">DOMO</span>
+              <span class="mini-tag">Tableau</span>
+              <span class="mini-tag">ETL</span>
+              <span class="mini-tag">Data Migration</span>
+              <span class="mini-tag">Snowflake</span>
+            </div>
+
+            <div class="experience-link-tag aiml-exp">
+              <i class="fas fa-link"></i> KD Infovision — AI/ML Engineer
+            </div>
+          </div>
+
+          <!-- Spam Detection -->
+          <div class="project-card standard-card aiml-card" data-category="aiml" data-project-id="spam">
+            <div class="card-badges-row">
+              <span class="category-badge aiml-badge"><i class="fas fa-brain"></i> AI/ML & Data</span>
+            </div>
+            <h3 class="card-title">Spam Detection System</h3>
+            <p class="card-desc">Text classification model for detecting spam messages using natural language
+              processing and machine learning algorithms. Implements data preprocessing, feature extraction, and
+              binary classification.</p>
+
+            <div class="project-tech-tags">
+              <span class="mini-tag">Python</span>
+              <span class="mini-tag">NLP</span>
+              <span class="mini-tag">Scikit-learn</span>
+              <span class="mini-tag">Machine Learning</span>
+            </div>
+
+            <div class="experience-link-tag aiml-exp">
+              <i class="fas fa-link"></i> Personal / KD Infovision
+            </div>
+
+            <div class="card-actions">
+              <a href="https://github.com/amanpandey8120/spam-detection" target="_blank" rel="noopener"
+                class="btn btn-outline btn-sm" id="btn-github-spam">
+                <i class="fab fa-github"></i> View GitHub
+              </a>
+            </div>
+          </div>
+
+          <!-- LinkedIn Post Writer -->
+          <div class="project-card standard-card aiml-card" data-category="aiml" data-project-id="linkedin">
+            <div class="card-badges-row">
+              <span class="category-badge aiml-badge"><i class="fas fa-brain"></i> AI/ML & Data</span>
+            </div>
+            <h3 class="card-title">LinkedIn Post Writer (AI)</h3>
+            <p class="card-desc">Automated LinkedIn post generation tool using AI/language model integration. Takes
+              topic inputs and generates professional, engagement-optimized LinkedIn content for personal or
+              professional use.</p>
+
+            <div class="project-tech-tags">
+              <span class="mini-tag">Python</span>
+              <span class="mini-tag">AI/LLM</span>
+              <span class="mini-tag">Automation</span>
+              <span class="mini-tag">API</span>
+            </div>
+
+            <div class="experience-link-tag aiml-exp">
+              <i class="fas fa-link"></i> Personal Project
+            </div>
+
+            <div class="card-actions">
+              <a href="https://github.com/amanpandey8120/Linkdin_post_writter" target="_blank" rel="noopener"
+                class="btn btn-outline btn-sm" id="btn-github-linkedin">
+                <i class="fab fa-github"></i> View GitHub
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div><!-- /container -->
   </section>
+
+  <!-- ============================================================
+       PROJECT DETAILS MODAL
+       ============================================================ -->
+  <div id="projectModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title"
+    aria-hidden="true">
+    <div class="modal-container">
+      <button class="modal-close" id="modal-close-btn" aria-label="Close project details">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="modal-body" id="modal-body">
+        <!-- Content injected by JS -->
+      </div>
+    </div>
+  </div>
 
   <!-- CONTACT SECTION -->
   <section id="contact" class="contact">
